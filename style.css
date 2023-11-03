@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: rgba(158, 158, 224, 0.3);
+}
+
+.bg {
+  background: url("https://i.pinimg.com/originals/3f/a0/40/3fa040b186dbfc221b96b62c7083c03b.jpg")
+    no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  /* background: url("https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg") */
+  /* no-repeat center right; */
+
+  /* background: url('https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat; */
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.navbar{
+background: #000;
+}
+
+btn:focus,
+input:focus,
+a:focus,
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+.navbar-toggler,
+.navbar-toggler {
+  outline: none !important;
+  border: none !important;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+.main .hight_90 {
+  height: 90vh;
+}
+
+.main :where(input):visited {
+  outline: unset;
+  border: none;
+}
+.card-flp-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.active .card-flp-inner {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background: black;
+  position: absolute;
+  top: -5.6rem;
+  left: -0rem;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.form-control:where(input)::placeholder {
+  color: #fff;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* /* Shrinking for mobile */
+@media (max-width: 768px) {
+  .waves {
+    height: auto;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  .back {
+    top: 0rem;
+  }
+  .bg {
+    height: 100% auto;
+  }
+}
